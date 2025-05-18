@@ -1,0 +1,271 @@
+{
+  "metadata": {
+    "config_file": "fast_gda_config.json",
+    "input_file": "./input/old-instances/b_read_on.txt",
+    "execution_time": 66.98,
+    "problem_size": {
+      "books": 100000,
+      "libraries": 100,
+      "category": "large_instance"
+    },
+    "enhanced_features": {
+      "adaptive_ranges": 0,
+      "multi_phase_strategy": false,
+      "dynamic_adjustment": false,
+      "problem_size_adaptive": false
+    },
+    "total_combinations": 16,
+    "successful_runs": 16,
+    "best_solution_file": "output/jsontorun/fast/b_read_on.txt"
+  },
+  "results": [
+    {
+      "config_name": "fast_exploration",
+      "boundary_function": "linear",
+      "score": 5811500,
+      "execution_time": 65.01,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": "output/jsontorun/fast/b_read_on.txt"
+    },
+    {
+      "config_name": "fast_balanced",
+      "boundary_function": "oscillating_decay",
+      "score": 5811100,
+      "execution_time": 53.81,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_balanced",
+      "boundary_function": "linear",
+      "score": 5809500,
+      "execution_time": 51.81,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_aggressive",
+      "boundary_function": "multiplicative",
+      "score": 5809500,
+      "execution_time": 51.98,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_aggressive",
+      "boundary_function": "linear",
+      "score": 5808500,
+      "execution_time": 59.92,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_aggressive",
+      "boundary_function": "oscillating_decay",
+      "score": 5808100,
+      "execution_time": 51.71,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_hybrid",
+      "boundary_function": "linear",
+      "score": 5808100,
+      "execution_time": 61.6,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_hybrid",
+      "boundary_function": "hybrid_adaptive",
+      "score": 5807900,
+      "execution_time": 66.19,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_exploration",
+      "boundary_function": "oscillating_decay",
+      "score": 5807700,
+      "execution_time": 61.0,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_hybrid",
+      "boundary_function": "oscillating_decay",
+      "score": 5807100,
+      "execution_time": 61.96,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_balanced",
+      "boundary_function": "hybrid_adaptive",
+      "score": 5806700,
+      "execution_time": 51.91,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_exploration",
+      "boundary_function": "hybrid_adaptive",
+      "score": 5804500,
+      "execution_time": 57.09,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_aggressive",
+      "boundary_function": "hybrid_adaptive",
+      "score": 5803700,
+      "execution_time": 58.04,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_exploration",
+      "boundary_function": "multiplicative",
+      "score": 5802600,
+      "execution_time": 57.98,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_hybrid",
+      "boundary_function": "multiplicative",
+      "score": 5801400,
+      "execution_time": 65.68,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    },
+    {
+      "config_name": "fast_balanced",
+      "boundary_function": "multiplicative",
+      "score": 5800900,
+      "execution_time": 53.07,
+      "problem_category": "large_instance",
+      "enhanced_features": {
+        "multi_phase": false,
+        "dynamic_adjustment": false,
+        "problem_size_adaptive": false
+      },
+      "solution_file": null
+    }
+  ],
+  "summary": {
+    "best_score": 5811500,
+    "best_combination": "fast_exploration + linear",
+    "average_score": 5806800.0,
+    "top_3_combinations": [
+      {
+        "rank": 1,
+        "config": "fast_exploration",
+        "boundary": "linear",
+        "score": 5811500,
+        "enhanced_features": {
+          "multi_phase": false,
+          "dynamic_adjustment": false,
+          "problem_size_adaptive": false
+        }
+      },
+      {
+        "rank": 2,
+        "config": "fast_balanced",
+        "boundary": "oscillating_decay",
+        "score": 5811100,
+        "enhanced_features": {
+          "multi_phase": false,
+          "dynamic_adjustment": false,
+          "problem_size_adaptive": false
+        }
+      },
+      {
+        "rank": 3,
+        "config": "fast_balanced",
+        "boundary": "linear",
+        "score": 5809500,
+        "enhanced_features": {
+          "multi_phase": false,
+          "dynamic_adjustment": false,
+          "problem_size_adaptive": false
+        }
+      }
+    ]
+  }
+}
