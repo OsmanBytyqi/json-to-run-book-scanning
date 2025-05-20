@@ -31,6 +31,91 @@ def _get_problem_category(num_books, num_libs):
     else:
         return "medium_instance"
 
+def analyze_mode_features(mode):
+    """
+    Analyze and explain the features for the selected mode
+    """
+    if mode == "fast":
+        print(f"📋 Fast Mode Optimizations:")
+        print(f"=" * 40)
+        
+        optimizations = {
+            "⚡ Execution Time Reduction": [
+                "• Base execution time: 20-30 seconds (vs 60-80)",
+                "• Large instance multiplier: 0.8x (vs 1.5x)",
+                "• Time reduction factor: 70% less execution time",
+                "• Early convergence with quality preservation"
+            ],
+            "🔀 Combination Optimization": [
+                "• Limited to 16 most effective combinations",
+                "• Prioritized proven strategies (hybrid_adaptive, oscillating_decay)",
+                "• Reduced adaptive variations (1 per phase vs 3)",
+                "• Focus on 4 best boundary functions"
+            ],
+            "🧵 Enhanced Threading": [
+                "• Minimum threads: 16 (vs 8)",
+                "• Scaling ratio: 1 thread per 4 tasks (vs 1 per 10)",
+                "• Maximum threads: 64 (vs 32)",
+                "• Better CPU utilization for small workloads"
+            ],
+            "📊 Parameter Efficiency": [
+                "• Optimized parameter ranges",
+                "• Faster adjustment frequencies (50 vs 100 iterations)",
+                "• Reduced performance windows (25 vs 50)",
+                "• Middle-value selection in fast mode"
+            ]
+        }
+        
+        for optimization_name, descriptions in optimizations.items():
+            print(f"\n{optimization_name}:")
+            for desc in descriptions:
+                print(f"  {desc}")
+    
+    elif mode == "enhanced":
+        print(f"📋 Enhanced GDA Features Analysis:")
+        print(f"=" * 50)
+        
+        features = {
+            "🔄 Adaptive Parameter Ranges": [
+                "• Exploration phase: High boundary buffers, aggressive decay",
+                "• Intensification phase: Conservative parameters, focused search", 
+                "• Diversification phase: Balanced parameters, broad exploration",
+                "• Automatic parameter selection from predefined ranges"
+            ],
+            "📏 Problem-Size Adaptive": [
+                "• Small instances: Reduced time, faster convergence",
+                "• Medium instances: Standard parameters",
+                "• Large instances: Extended time, robust search",
+                "• Automatic scaling based on problem dimensions"
+            ],
+            "🎯 Multi-Phase Strategy": [
+                "• Phase 1 (40%): Exploration-focused neighbor selection",
+                "• Phase 2 (35%): Intensification with conservative moves",
+                "• Phase 3 (25%): Diversification with balanced operators",
+                "• Adaptive phase transitions based on performance"
+            ],
+            "⚡ Dynamic Parameter Adjustment": [
+                "• Real-time parameter modification during execution",
+                "• Performance window monitoring (50 iterations)",
+                "• Automatic adjustment when stagnation detected",
+                "• Sensitivity-based parameter tuning"
+            ],
+            "🌊 Enhanced Boundary Functions": [
+                "• Linear: Constant rate decrease",
+                "• Multiplicative: Exponential decay",
+                "• Stepwise: Discrete level drops",
+                "• Logarithmic: Gradual slow decay",
+                "• Quadratic: Accelerating decay",
+                "• Hybrid Adaptive: Strategy switching based on stagnation",
+                "• Sigmoid Decay: S-curve boundary adjustment",
+                "• Oscillating Decay: Wave-like boundary with overall trend"
+            ]
+        }
+        
+        for feature_name, descriptions in features.items():
+            print(f"\n{feature_name}:")
+            for desc in descriptions:
+                print(f"  {desc}")
 
 def run_gda_tuning(mode):
     """
