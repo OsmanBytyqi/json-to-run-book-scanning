@@ -1,0 +1,331 @@
+{
+  "enhanced_features": {
+    "adaptive_parameter_ranges": true,
+    "problem_size_adaptive": true,
+    "multi_phase_strategy": true,
+    "dynamic_parameter_adjustment": true,
+    "enhanced_boundary_functions": true
+  },
+  "problem_size_adaptive": {
+    "small_instance": {
+      "condition": "books < 1000 and libraries < 100",
+      "time_multiplier": 0.5,
+      "boundary_buffer_adjustment": 0.9,
+      "stagnation_factor": 0.7,
+      "iteration_boost": 1.3
+    },
+    "medium_instance": {
+      "condition": "books < 10000 and libraries < 1000",
+      "time_multiplier": 0.7,
+      "boundary_buffer_adjustment": 1.0,
+      "stagnation_factor": 0.8,
+      "iteration_boost": 1.0
+    },
+    "large_instance": {
+      "condition": "books >= 10000 or libraries >= 1000",
+      "time_multiplier": 0.8,
+      "boundary_buffer_adjustment": 1.1,
+      "stagnation_factor": 0.9,
+      "iteration_boost": 0.9
+    }
+  },
+  "multi_phase_strategy": {
+    "enabled": true,
+    "phase_duration_ratio": [0.4, 0.35, 0.25],
+    "phase_transition_threshold": 0.1,
+    "adaptive_phase_switching": true
+  },
+  "dynamic_parameter_adjustment": {
+    "enabled": true,
+    "adjustment_frequency": 100,
+    "performance_window": 50,
+    "improvement_threshold": 0.01,
+    "parameter_sensitivity": {
+      "boundary_buffer": 0.15,
+      "decay_factor": 0.08,
+      "stagnation_count": 8
+    }
+  },
+  "gda_parameters": [
+    {
+      "name": "balanced_config",
+      "max_time": 60,
+      "initial_boundary_buffer": 1.25,
+      "delta_B_factor": 0.3,
+      "alpha": 0.9,
+      "beta": 1.05,
+      "step_size": 10,
+      "d_factor": 50,
+      "restart_stagnation_count": 50,
+      "neighbor_selection": {
+        "swap_signed": 0.4,
+        "swap_same_books": 0.3,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.1
+      }
+    },
+    {
+      "name": "aggressive_config",
+      "max_time": 50,
+      "initial_boundary_buffer": 1.6,
+      "delta_B_factor": 0.6,
+      "alpha": 0.85,
+      "beta": 1.12,
+      "step_size": 6,
+      "d_factor": 80,
+      "restart_stagnation_count": 30,
+      "neighbor_selection": {
+        "swap_signed": 0.5,
+        "swap_same_books": 0.35,
+        "insert_library": 0.1,
+        "swap_signed_with_unsigned": 0.05
+      }
+    },
+    {
+      "name": "conservative_config",
+      "max_time": 80,
+      "initial_boundary_buffer": 1.1,
+      "delta_B_factor": 0.15,
+      "alpha": 0.95,
+      "beta": 1.02,
+      "step_size": 15,
+      "d_factor": 30,
+      "restart_stagnation_count": 70,
+      "neighbor_selection": {
+        "swap_signed": 0.3,
+        "swap_same_books": 0.25,
+        "insert_library": 0.25,
+        "swap_signed_with_unsigned": 0.2
+      }
+    },
+    {
+      "name": "exploration_config",
+      "max_time": 60,
+      "initial_boundary_buffer": 1.3,
+      "delta_B_factor": 0.4,
+      "alpha": 0.88,
+      "beta": 1.08,
+      "step_size": 8,
+      "d_factor": 60,
+      "restart_stagnation_count": 40,
+      "neighbor_selection": {
+        "swap_signed": 0.25,
+        "swap_same_books": 0.45,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.1
+      }
+    },
+    {
+      "name": "hybrid_adaptive_config",
+      "max_time": 70,
+      "initial_boundary_buffer": 1.4,
+      "delta_B_factor": 0.35,
+      "alpha": 0.89,
+      "beta": 1.07,
+      "step_size": 9,
+      "d_factor": 55,
+      "restart_stagnation_count": 35,
+      "neighbor_selection": {
+        "swap_signed": 0.35,
+        "swap_same_books": 0.3,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.15
+      }
+    },
+    {
+      "name": "problem_aware_config",
+      "max_time": 55,
+      "initial_boundary_buffer": 1.35,
+      "delta_B_factor": 0.32,
+      "alpha": 0.9,
+      "beta": 1.06,
+      "step_size": 10,
+      "d_factor": 52,
+      "restart_stagnation_count": 45,
+      "neighbor_selection": {
+        "swap_signed": 0.4,
+        "swap_same_books": 0.25,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.15
+      }
+    }
+  ],
+  "adaptive_parameter_ranges": {
+    "exploration_phase_var_1": {
+      "name": "exploration_phase_var_1",
+      "max_time": 40,
+      "initial_boundary_buffer": [1.5, 1.7],
+      "delta_B_factor": [0.4, 0.5],
+      "alpha": [0.86, 0.89],
+      "beta": [1.1, 1.13],
+      "step_size": [7, 9],
+      "d_factor": [70, 90],
+      "restart_stagnation_count": [25, 30],
+      "neighbor_selection": {
+        "swap_signed": 0.2,
+        "swap_same_books": 0.5,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.1
+      }
+    },
+    "exploration_phase_var_2": {
+      "name": "exploration_phase_var_2",
+      "max_time": 45,
+      "initial_boundary_buffer": [1.4, 1.6],
+      "delta_B_factor": [0.35, 0.45],
+      "alpha": [0.84, 0.87],
+      "beta": [1.08, 1.11],
+      "step_size": [6, 8],
+      "d_factor": [65, 85],
+      "restart_stagnation_count": [20, 25],
+      "neighbor_selection": {
+        "swap_signed": 0.3,
+        "swap_same_books": 0.4,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.1
+      }
+    },
+    "exploration_phase_var_3": {
+      "name": "exploration_phase_var_3",
+      "max_time": 50,
+      "initial_boundary_buffer": [1.6, 1.8],
+      "delta_B_factor": [0.45, 0.55],
+      "alpha": [0.82, 0.85],
+      "beta": [1.12, 1.15],
+      "step_size": [5, 7],
+      "d_factor": [75, 95],
+      "restart_stagnation_count": [15, 20],
+      "neighbor_selection": {
+        "swap_signed": 0.25,
+        "swap_same_books": 0.45,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.1
+      }
+    },
+    "intensification_phase_var_1": {
+      "name": "intensification_phase_var_1",
+      "max_time": 60,
+      "initial_boundary_buffer": [1.15, 1.25],
+      "delta_B_factor": [0.12, 0.18],
+      "alpha": [0.94, 0.96],
+      "beta": [1.03, 1.05],
+      "step_size": [13, 16],
+      "d_factor": [25, 35],
+      "restart_stagnation_count": [75, 85],
+      "neighbor_selection": {
+        "swap_signed": 0.6,
+        "swap_same_books": 0.25,
+        "insert_library": 0.1,
+        "swap_signed_with_unsigned": 0.05
+      }
+    },
+    "intensification_phase_var_2": {
+      "name": "intensification_phase_var_2",
+      "max_time": 65,
+      "initial_boundary_buffer": [1.1, 1.2],
+      "delta_B_factor": [0.1, 0.15],
+      "alpha": [0.96, 0.98],
+      "beta": [1.01, 1.03],
+      "step_size": [15, 18],
+      "d_factor": [20, 30],
+      "restart_stagnation_count": [80, 90],
+      "neighbor_selection": {
+        "swap_signed": 0.55,
+        "swap_same_books": 0.3,
+        "insert_library": 0.1,
+        "swap_signed_with_unsigned": 0.05
+      }
+    },
+    "intensification_phase_var_3": {
+      "name": "intensification_phase_var_3",
+      "max_time": 58,
+      "initial_boundary_buffer": [1.12, 1.22],
+      "delta_B_factor": [0.11, 0.16],
+      "alpha": [0.95, 0.97],
+      "beta": [1.02, 1.04],
+      "step_size": [14, 17],
+      "d_factor": [22, 32],
+      "restart_stagnation_count": [77, 87],
+      "neighbor_selection": {
+        "swap_signed": 0.65,
+        "swap_same_books": 0.2,
+        "insert_library": 0.1,
+        "swap_signed_with_unsigned": 0.05
+      }
+    },
+    "diversification_phase_var_1": {
+      "name": "diversification_phase_var_1",
+      "max_time": 70,
+      "initial_boundary_buffer": [1.25, 1.35, 1.45],
+      "delta_B_factor": [0.25, 0.35, 0.45],
+      "alpha": [0.88, 0.9, 0.92],
+      "beta": [1.06, 1.08, 1.1],
+      "step_size": [8, 10, 12],
+      "d_factor": [45, 65, 85],
+      "restart_stagnation_count": [40, 50, 60],
+      "neighbor_selection": {
+        "swap_signed": 0.25,
+        "swap_same_books": 0.25,
+        "insert_library": 0.25,
+        "swap_signed_with_unsigned": 0.25
+      }
+    },
+    "diversification_phase_var_2": {
+      "name": "diversification_phase_var_2",
+      "max_time": 75,
+      "initial_boundary_buffer": [1.3, 1.4, 1.5],
+      "delta_B_factor": [0.3, 0.4, 0.5],
+      "alpha": [0.86, 0.88, 0.9],
+      "beta": [1.08, 1.1, 1.12],
+      "step_size": [7, 9, 11],
+      "d_factor": [50, 70, 90],
+      "restart_stagnation_count": [35, 45, 55],
+      "neighbor_selection": {
+        "swap_signed": 0.3,
+        "swap_same_books": 0.3,
+        "insert_library": 0.2,
+        "swap_signed_with_unsigned": 0.2
+      }
+    },
+    "diversification_phase_var_3": {
+      "name": "diversification_phase_var_3",
+      "max_time": 68,
+      "initial_boundary_buffer": [1.28, 1.38, 1.48],
+      "delta_B_factor": [0.28, 0.38, 0.48],
+      "alpha": [0.87, 0.89, 0.91],
+      "beta": [1.07, 1.09, 1.11],
+      "step_size": [8, 10, 12],
+      "d_factor": [48, 68, 88],
+      "restart_stagnation_count": [38, 48, 58],
+      "neighbor_selection": {
+        "swap_signed": 0.35,
+        "swap_same_books": 0.25,
+        "insert_library": 0.25,
+        "swap_signed_with_unsigned": 0.15
+      }
+    }
+  },
+  "boundary_functions": [
+    "linear",
+    "multiplicative",
+    "stepwise",
+    "logarithmic",
+    "quadratic",
+    "hybrid_adaptive",
+    "sigmoid_decay",
+    "oscillating_decay"
+  ],
+  "parallel_execution": {
+    "enabled": true,
+    "min_threads": 8,
+    "max_threads": 32,
+    "thread_scaling": 10
+  },
+  "enhanced_mode_settings": {
+    "enabled": true,
+    "total_combinations": 120,
+    "comprehensive_analysis": true,
+    "all_boundary_functions": true,
+    "adaptive_ranges_enabled": true
+  }
+} 
