@@ -1,0 +1,43 @@
+====================================================================================================
+GREAT DELUGE ALGORITHM - FAST MODE SUMMARY REPORT
+====================================================================================================
+Generated: 2025-06-22 23:07:39
+Mode: Fast
+Config File: fast_gda_config.json
+Total Files Processed: 1
+Total Execution Time: 64.92 seconds (1.1 minutes)
+
+OVERALL STATISTICS:
+--------------------------------------------------
+Successful runs: 1/1
+Failed runs: 0/1
+Average best score: 9,695,679.00
+Total score across all files: 9,695,679
+Highest score: 9,695,679
+Lowest score: 9,695,679
+Average execution time: 64.55 seconds
+Total computation time: 64.55 seconds
+
+DETAILED RESULTS:
+--------------------------------------------------------------------------------------------------------------
+Rank Filename                  Folder          Score           Time (s)   Time (m)   Best Combination         
+--------------------------------------------------------------------------------------------------------------
+1    B25k_L55_D110.txt         new-instances   9,695,679       64.5       1.08       fast_balanced + oscillat 
+
+PROBLEM SIZE ANALYSIS:
+-------------------------------------------------------------------------------------------------------------------
+Filename                  Folder          Books      Libraries    Days   Category        Score          
+-------------------------------------------------------------------------------------------------------------------
+B25k_L55_D110.txt         new-instances   25,000     55           110    large_instance  9,695,679      
+
+PERFORMANCE BY PROBLEM CATEGORY:
+--------------------------------------------------
+Large_Instance Instances (1 files):
+  Average Score: 9,695,679.00
+  Best Score: 9,695,679
+  Average Time: 64.55 seconds
+  Total Time: 64.55 seconds
+
+====================================================================================================
+END OF REPORT
+====================================================================================================
